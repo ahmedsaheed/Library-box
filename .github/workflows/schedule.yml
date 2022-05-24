@@ -1,1 +1,17 @@
 
+on:
+  schedule:
+    - cron: '0 * * * *'
+name: Update gist with latest reads from google books
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: update-gist
+        uses: ahmedsaheed/Library-box@master
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
+          GOOGLE_BOOKS_UID: ${{ secrets.GOOGLE_BOOKS_UID }}
