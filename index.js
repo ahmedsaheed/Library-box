@@ -1,4 +1,4 @@
-import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import 'dotenv/config'
 import express from 'express'
 import { Octokit } from "@octokit/core"
 import wordwrap  from "wordwrap"
@@ -24,7 +24,7 @@ async function main() {
         
         async function justRead() {
           try {
-            var recent = await request.get('https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/4/volumes?&key=${googleBooksKey}');
+            var recent = await request.get(`https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/4/volumes?&key=${googleBooksKey}`);
             await delay();
             return recent.body;
           } catch(error) {
@@ -34,7 +34,7 @@ async function main() {
 
         async function currentlyRead() {
           try {
-            var current = await request.get('https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/3/volumes?&key=${googleBooksKey}');
+            var current = await request.get(`https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/3/volumes?&key=${googleBooksKey}`);
             await delay();
             return current.body;
           } catch(error) {
