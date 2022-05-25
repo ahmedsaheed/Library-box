@@ -78,11 +78,11 @@ async function updateGist(readingStatus) {
   let gist;
   try {
     const octokit = new Octokit({
-      auth: `${githubToken}`
+      auth: githubToken
     })
     
     gist = await octokit.request('GET /gists/{gist_id}', {
-      gist_id: `${gistId}`
+      gist_id: gistId
       
     }
     )
@@ -101,7 +101,7 @@ async function updateGist(readingStatus) {
 
   try {
     octokit.request('PATCH /gists/{gist_id}',{
-      gist_id: `${gistId}`,
+      gist_id: gistId,
       files: {
         [filename]: {
           filename,
