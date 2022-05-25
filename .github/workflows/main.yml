@@ -14,3 +14,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
           GOOGLE_BOOKS_UID: ${{ secrets.GOOGLE_BOOKS_UID }}
+
