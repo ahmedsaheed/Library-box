@@ -100,6 +100,10 @@ async function updateGist(readingStatus) {
   }
 
   try {
+   
+      const octokit = new Octokit({
+      auth: githubToken
+    })
     octokit.request('PATCH /gists/{gist_id}',{
       gist_id: gistId,
       files: {
