@@ -6,9 +6,9 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
       - name: update-gist
-        uses: ahmedsaheed/Library-box@main
+        uses: ahmedsaheed/Library-box@master
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
