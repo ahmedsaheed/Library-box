@@ -14,7 +14,6 @@
 
 1. [Create a new public GitHub Gist](https://gist.github.com/)
 2. [Create a token with the `gist` scope and copy it.](https://github.com/settings/tokens/new)
-3. [Create a Goodreads account](https://www.goodreads.com/user/sign_up)
 4. [Create an API for the Google Books](https://developers.google.com/books/docs/v1/using)
 5. [Get your Google Books User ID](https://books.google.com/). It is usually located on the google books url `https://books.google.com/books?uid=**************`
 
