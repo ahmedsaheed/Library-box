@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: update-gist
-        uses: aahmedsaheed/Library-box@main
+        uses: ahmedsaheed/Library-box@main
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
