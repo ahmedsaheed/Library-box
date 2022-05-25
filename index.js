@@ -78,16 +78,16 @@ async function updateGist(readingStatus) {
   let gist;
   try {
     const octokit = new Octokit({
-      auth: githubToken
+      auth: ${githubToken}
     })
     
     gist = await octokit.request('GET /gists/{gist_id}', {
-      gist_id: gistId
+      gist_id: ${gistId}
       
     }
     )
   } catch (error) {
-    console.error(`Unable to get gist\n${error}`);
+    console.error(`Unable to get gist 1\n${error}`);
   }
 
   // Get original filename to update that same file
@@ -101,7 +101,7 @@ async function updateGist(readingStatus) {
 
   try {
     octokit.request('PATCH /gists/{gist_id}',{
-      gist_id: gistId,
+      gist_id: ${gistId},
       files: {
         [filename]: {
           filename,
