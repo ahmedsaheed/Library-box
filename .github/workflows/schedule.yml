@@ -6,7 +6,7 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: update-gist
         uses: ahmedsaheed/Library-box@main
         env:
@@ -14,4 +14,3 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
           GOOGLE_BOOKS_UID: ${{ secrets.GOOGLE_BOOKS_UID }}
-
