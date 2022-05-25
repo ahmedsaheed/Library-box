@@ -1,0 +1,9 @@
+name: Library-box
+author: Ahmed Saheed <ahmed@saheed.com>
+description: Update a pinned gist to contain your latest reads on Google Books
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'book'
+  color: 'pink'
