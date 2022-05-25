@@ -1,13 +1,15 @@
 on:
-  workflow_dispatch:    
-name: Update gist with latest reads from google books
+  workflow_dispatch:   
+#   schedule:
+#     - cron: '0 * * * *'
+name: Update gist with latest from google books
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
       - name: update-gist
-        uses: ahmedsaheed/Library-box@main
+        uses: aahmedsaheed/Library-box@main
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
