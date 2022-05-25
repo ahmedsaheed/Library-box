@@ -6,8 +6,8 @@ import request from 'superagent';
 const {
     GIST_ID: gistId,
     GH_TOKEN: githubToken,
-    GOOGLE_BOOKS_UID: googlejustFinishedUID,
-    GOOGLE_BOOKS_KEY: googlejustFinishedKey,
+    GOOGLE_BOOKS_UID: googleBooksUID,
+    GOOGLE_BOOKS_KEY: googleBooksKey,
 } = process.env;
   
 async function main() {
@@ -24,7 +24,7 @@ async function main() {
         
         async function justRead() {
           try {
-            var recent = await request.get('https://www.googleapis.com/books/v1/users/${googlejustFinishedUID}/bookshelves/4/volumes?&key=${googlejustFinishedKey}');
+            var recent = await request.get('https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/4/volumes?&key=${googleBooksKey}');
             await delay();
             return recent.body;
           } catch(error) {
@@ -34,7 +34,7 @@ async function main() {
 
         async function currentlyRead() {
           try {
-            var current = await request.get('https://www.googleapis.com/books/v1/users/${googlejustFinishedUID}/bookshelves/3/volumes?&key=${googlejustFinishedKey}');
+            var current = await request.get('https://www.googleapis.com/books/v1/users/${googleBooksUID}/bookshelves/3/volumes?&key=${googleBooksKey}');
             await delay();
             return current.body;
           } catch(error) {
