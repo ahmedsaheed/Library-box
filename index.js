@@ -53,8 +53,6 @@ async function main() {
           let currentReadingAuthor = currentReading.items[0].volumeInfo.authors;
           const currentTitle = currentReadingTitle;
           const currentAuthor = currentReadingAuthor.toString();
-          console.log(justReadTitle);
-          console.log(justReadAuthor);
 
         const currentlyReading = justReadTitle && justReadAuthor
             ? `Recently Finished: ${justReadTitle.split(':'[0])} \n By ${justReadAuthor}\n`
