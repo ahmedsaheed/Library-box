@@ -46,7 +46,7 @@ async function main() {
           let justFinished = await justRead();
             let justFinishedTitle = ""
             let justFinishedauthor = ""
-            if(justFinished.items.length < 1){
+            if(justFinished.totalItems < 1){
                 justFinishedTitle = "Nothing Read Yet" 
                 justFinishedauthor = "NIL"
             }
@@ -57,7 +57,7 @@ async function main() {
           let currentReading = await currentlyRead();
           let currentReadingTitle = ""
           let currentReadingAuthor = ""
-          if(currentReading.items.length < 1){
+          if(currentReading.totalItems < 1){
                 justFinishedTitle = "Nothing For Now" 
                 justFinishedauthor = "NIL"
             }
