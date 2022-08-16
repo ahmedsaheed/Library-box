@@ -1,8 +1,6 @@
-on:
- workflow_dispatch:
-   
-#   schedule:
-#     - cron: '0 * * * *'
+on:  
+  schedule:
+    - cron: "0 * * * *"
 name: Update gist with latest from google books
 jobs:
   update-gist:
