@@ -6,4 +6,4 @@ runs:
   image: 'Dockerfile'
 branding:
   icon: 'book'
-  color: 'pink'
+  color: 'blue'
