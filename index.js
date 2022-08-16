@@ -61,8 +61,8 @@ async function main() {
                 justFinishedTitle = "Nothing For Now" 
                 justFinishedauthor = "NIL"
             }
-          let currentReadingTitle = currentReading.items[0].volumeInfo.title;
-          let currentReadingAuthor = currentReading.items[0].volumeInfo.authors;
+           currentReadingTitle = currentReading.items[0].volumeInfo.title;
+           currentReadingAuthor = currentReading.items[0].volumeInfo.authors;
           const currentTitle = currentReadingTitle;
           const currentAuthor = currentReadingAuthor.toString();
 
