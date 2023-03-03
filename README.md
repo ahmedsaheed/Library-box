@@ -1,16 +1,12 @@
 <p align="center">
   <img width="400" src="https://user-images.githubusercontent.com/87912847/170173939-ed0d80b7-7a5c-432a-a3a7-cc7c2f2d262e.png">
   <h3 align="center">Library-box</h3>
-  <p align="center">📚Update a pinned gist to contain your latest reads & Current read from Google Books<br>For those without the GoodRead API key </p>
+  <p align="center">📚Update a pinned gist to contain your latest and <br> current read from Google Books. For those without the GoodRead API key </p>
 </p>
 
 ---
 
-📌✨ For more pinned-gist projects like this one, check out: https://github.com/matchai/awesome-pinned-gists
-
-## Setup
-
-### Prep work
+### Setup
 
 1. [Create a new public GitHub Gist](https://gist.github.com/)
 2. [Create a token with the `gist` scope and copy it.](https://github.com/settings/tokens/new)
@@ -27,7 +23,4 @@
   - **GOOGLE_BOOKS_KEY:** The API key for your Google Books account.
   - **GOOGLE_BOOKS_UID:** The user ID for your Google Books account.
 
-## Inspiration
-
-This gist was inspired by [matchai's](https://github.com/matchai) [bird-box](https://github.com/matchai/bird-box).<br>
-Also inspired by [amorriscode](https://github.com/amorriscode) [book-box](https://github.com/amorriscode/book-box).
+<sup> For more pinned-gist projects like this one, check out: https://github.com/matchai/awesome-pinned-gists</sup>
