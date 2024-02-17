@@ -55,7 +55,7 @@ async function main() {
             }
            
           const justReadTitle = justFinishedTitle;
-          const justReadAuthor = justFinishedauthor.toString();
+          const justReadAuthor = justFinishedauthor?.toString();
           let currentReading = await currentlyRead();
           let currentReadingTitle = ""
           let currentReadingAuthor = ""
@@ -68,7 +68,7 @@ async function main() {
             }
            
           const currentTitle = currentReadingTitle;
-          const currentAuthor = currentReadingAuthor.toString();
+          const currentAuthor = currentReadingAuthor?.toString();
 
         const currentlyReading = justReadTitle && justReadAuthor
             ? `Recently Finished: ${justReadTitle.split(':'[0])} \n By ${justReadAuthor}\n`
