@@ -50,8 +50,8 @@ async function main() {
                 justFinishedTitle = "Nothing Read Yet" 
                 justFinishedauthor = "NIL"
             }else{
-                justFinishedTitle = justFinished.items[0].volumeInfo.title;
-                justFinishedauthor = justFinished.items[0].volumeInfo.authors;
+                justFinishedTitle = justFinished?.items[0].volumeInfo.title;
+                justFinishedauthor = justFinished?.items[0].volumeInfo.authors;
             }
            
           const justReadTitle = justFinishedTitle;
@@ -59,12 +59,12 @@ async function main() {
           let currentReading = await currentlyRead();
           let currentReadingTitle = ""
           let currentReadingAuthor = ""
-          if(currentReading.totalItems < 1){
+          if(currentReading?.totalItems < 1){
                 justFinishedTitle = "Nothing For Now" 
                 justFinishedauthor = "NIL"
             }else{
-                currentReadingTitle = currentReading.items[0].volumeInfo.title;
-                currentReadingAuthor = currentReading.items[0].volumeInfo.authors;
+                currentReadingTitle = currentReading?.items[0].volumeInfo.title;
+                currentReadingAuthor = currentReading?.items[0].volumeInfo.authors;
             }
            
           const currentTitle = currentReadingTitle;
