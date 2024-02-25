@@ -73,10 +73,11 @@ async function main() {
         const currentlyReading = justReadTitle && justReadAuthor
             ? `Recently Finished: ${justReadTitle.split(':'[0])} \n By ${justReadAuthor}\n`
             : `I haven't read recently.\n`
-
+        console.log(justReadTitle, justReadAuthor)
         const recentlyRead = currentTitle && currentAuthor
           ? `Currently Reading: ${currentTitle.split(':')[0]} \nBy ${currentAuthor}`
           : `I am not reading anything at the moment.\n--------------------------------------`
+        console.log(currentTitle, currentAuthor)
         await updateGist([wrap(recentlyRead), wrap(currentlyReading)]);
         })();
     }catch(error){
